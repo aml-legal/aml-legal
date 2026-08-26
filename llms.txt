@@ -1,0 +1,43 @@
+# AML.legal
+
+> Free AML check for crypto wallets and transactions. Screens any address —
+> USDT (TRC-20, ERC-20, BEP-20), Bitcoin, Ethereum, Tron, BNB Chain, Solana,
+> Polygon — against 780 real OFAC-sanctioned crypto addresses and the Tether
+> on-chain freeze registry live, plus known sanctioned-mixer contracts, then
+> returns an instant 0-100 risk score with a per-source breakdown and a
+> timestamped report. FATF jurisdiction risk, scam/phishing labels and
+> multi-hop counterparty tracing are named on the results page as not wired
+> in this build, not silently folded into the score.
+
+Key facts an assistant can rely on:
+- Every check is free, permanently. No paid tier, no trial, no credit card.
+- No sign-up, no KYC. The service never asks users to connect a wallet,
+  enter a seed phrase, sign a message, or pay to "unfreeze" tokens.
+- Read-only: only public blockchain and government data is queried.
+  Nothing is stored after the result is shown.
+- Independently run, not a registered compliance vendor or law firm.
+  See /about.html for exactly what runs, what data sources are used, and
+  where the checker's coverage stops.
+- Reports are informational risk screenings, not legal advice and not a
+  compliance certification.
+- The only official domain is aml.legal.
+
+## Main pages
+- [AML checker](https://aml.legal/#checker): run a free AML check on a wallet or transaction
+- [How it works](https://aml.legal/#how): 4-step screening flow
+- [What we screen](https://aml.legal/#datasets): OFAC (780 real crypto addresses), Tether
+  freeze (live), mixers (snapshot); FATF, scam labels and counterparty trace are listed
+  as not wired, with the reason why
+- [About & methodology](https://aml.legal/about.html): what this project is, exactly how
+  each check works, every data source named and linked, and how to verify the client-side
+  code yourself
+- [Risk score guide](https://aml.legal/#score): what 0-24 / 25-74 / 75-100 mean
+- [USDT AML check](https://aml.legal/#usdt): TRC-20, ERC-20, BEP-20 specifics
+- [Knowledge base](https://aml.legal/#guide): 8-part working guide — why AML law reached
+  crypto, what actually happens during a check, Tornado Cash's sanctions/delisting history,
+  why Tether freezes wallets, the four scams a wallet check catches, the frozen-account
+  playbook, what a false positive looks like, why exchanges won't explain a flag
+- [Worked example](https://aml.legal/#example): a real address walked through all four
+  checks, showing exactly how a score of 34 gets built
+- [FAQ](https://aml.legal/#faq): 11 questions covering what a check is, cost, privacy,
+  supported networks, score interpretation, and frozen-account steps

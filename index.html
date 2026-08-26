@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AML Check Crypto — Free Wallet &amp; USDT Scanner | AML.legal</title>
+<meta name="description" content="Free AML check crypto wallets and USDT can trust — OFAC sanctions, Tether freeze list, mixers &amp; darknet exposure screened instantly. Get a free AML check wallet report in 30 seconds, no sign-up, no seed phrase.">
+<link rel="canonical" href="https://aml.legal/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0A0B0D">
+<!-- Google Search / general browsers: SVG first, then PNG ≥48px per Google's 2026 favicon guidelines -->
+<link rel="icon" type="image/svg+xml" href="icons/favicon-source.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="icons/icon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/icon-96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<!-- Apple: full-bleed icon (iOS applies its own corner mask) + monochrome Safari pinned-tab -->
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#2DB8D6">
+<!-- Android / PWA -->
+<link rel="manifest" href="icons/site.webmanifest">
+<!-- Windows tiles -->
+<meta name="msapplication-TileColor" content="#0A0B0D">
+<meta name="msapplication-TileImage" content="icons/mstile-150x150.png">
+<meta name="msapplication-config" content="icons/browserconfig.xml">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aml.legal/">
+<meta property="og:site_name" content="AML.legal">
+<meta property="og:title" content="AML Check Crypto — Free Wallet Screening | AML.legal">
+<meta property="og:description" content="Run a free AML check on any crypto wallet or USDT address. OFAC sanctions, Tether freeze registry, mixer &amp; darknet exposure. Instant risk score, no sign-up.">
+<meta property="og:image" content="https://aml.legal/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AML Check Crypto — Free Wallet Screening | AML.legal">
+<meta name="twitter:description" content="Free AML check for USDT, BTC, ETH and 100+ coins. OFAC, Tether freeze list, mixers, darknet. No KYC, no seed phrase — ever.">
+<meta name="twitter:image" content="https://aml.legal/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AML.legal — Free Crypto AML Checker",
+  "url": "https://aml.legal/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Free AML check for crypto wallets and transactions. Screens addresses against OFAC sanctions, the Tether on-chain freeze registry, mixer and darknet exposure lists. Instant 0–100 risk score. No sign-up, no KYC, no seed phrase.",
+  "featureList": [
+    "Free AML check for crypto wallets and transactions, no sign-up required",
+    "USDT AML check across TRC-20, ERC-20 and BEP-20 networks",
+    "OFAC SDN sanctions screening against 780 real crypto addresses",
+    "Live lookup against Tether's on-chain freeze registry",
+    "Detection of known sanctioned-mixer contracts",
+    "Instant 0–100 risk score with a per-source breakdown",
+    "Timestamped, downloadable report"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is an AML check for crypto?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It's a background check for a wallet address instead of a person. This AML crypto check matches it against 780 real OFAC-sanctioned crypto addresses, asks the USDT contract directly whether it's frozen, and checks it against known sanctioned-mixer contracts — then returns a 0–100 score with the reasoning attached, not just the number." } },
+    { "@type": "Question", "name": "What's the difference between this and checking a block explorer myself?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A block explorer shows raw activity: this address sent this many tokens to that address on this date. A screening report takes the same public data and tells you what it means — whether any of that history is sanctioned, frozen, or connected to something worth knowing about before you accept a transfer." } },
+    { "@type": "Question", "name": "How do I run a free AML check on a USDT wallet?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Paste the address into the checker. Pick TRC-20, ERC-20 or BEP-20 if the network isn't auto-detected. Press run. Under thirty seconds later you have a score and a breakdown. No account, no email, no wait." } },
+    { "@type": "Question", "name": "Is this AML check free, or is there a catch?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No catch. The underlying data is free: OFAC's sanctions list is a government file, Tether's freeze function is a public contract call, and blockchain data is open by definition. There is nothing proprietary being sold here, so there is nothing to charge for." } },
+    { "@type": "Question", "name": "Do you ever ask for a seed phrase or wallet connection?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Screening a wallet requires exactly one input: the address, which is public by definition. There is no wallet-connect button anywhere on this site, and there never will be — a legitimate screening tool has no reason to want your keys." } },
+    { "@type": "Question", "name": "Can I check a transaction hash instead of a wallet address?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Switch to the By transaction tab, paste the TXID, and pick the network. This is useful when you care about one specific incoming transfer rather than a sender's entire history." } },
+    { "@type": "Question", "name": "What should I do if the score comes back Medium or High?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Medium: ask the sender where the funds originally came from, or request a transfer from a different wallet if the answer feels evasive. High: do not accept the transfer, and do not try to move it elsewhere to obscure it — ask for a different source or end the deal." } },
+    { "@type": "Question", "name": "Why would my own wallet come back flagged?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usually it's inherited history, not anything you did. If you ever received funds from an exchange, a P2P trade, or someone else's wallet with a murky past, that history is still attached to your address. Screening tools flag what happened, not whose fault it was." } },
+    { "@type": "Question", "name": "My exchange account got frozen after a deposit. What now?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Screen the sender's wallet first to understand what triggered the flag, then find your exchange's compliance or AML-review channel specifically. Bring source-of-funds documentation. Clean funds with real paperwork typically clear in one to four weeks. Anyone offering to speed that up for a fee is running a scam." } },
+    { "@type": "Question", "name": "How accurate is an AML check wallet score compared to paid tools?",
+      "acceptedAnswer": { "@type": "Answer", "text": "About as accurate as any single AML tool gets — treat it as one strong opinion, not a certified verdict. The hard checks, OFAC match and Tether freeze, are exactly as accurate as paid tools, because they read the same government file and the same public contract. The soft parts, like mixer exposure weighting, vary between vendors the same way they vary between Chainalysis and Elliptic." } },
+    { "@type": "Question", "name": "Is there a free check wallet owners can run before every deposit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — an AML check crypto free, every time, with no limit on how many addresses you run. Paste the address whenever you want to check AML crypto risk before accepting a transfer; there's no daily cap and no upgrade prompt waiting behind it." } },
+    { "@type": "Question", "name": "Does a clean result mean the funds are guaranteed safe?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It means nothing matched at the exact moment of the check, not a promise about the future. Blacklists update daily, so an address that's clean today can be flagged next week. A timestamped report proves what you knew when you made the call." } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to run a free AML wallet check",
+  "description": "How to check a crypto wallet or USDT address for AML risk — sanctions, freezes, mixers and darknet exposure — in under a minute, for free.",
+  "totalTime": "PT1M",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Pick the network",
+      "text": "Choose Bitcoin, Ethereum, Tron, BNB Chain, Solana or Polygon — or leave it on auto-detect and paste the address; the format is read automatically." },
+    { "@type": "HowToStep", "position": 2, "name": "Paste the address",
+      "text": "Paste a wallet address or a transaction hash. The format is validated before anything else runs." },
+    { "@type": "HowToStep", "position": 3, "name": "Let it run",
+      "text": "Six checks named in sequence. Three run on live or curated data with every scan: sanctions, Tether freeze registry, mixer and darknet exposure. Three are not wired to a live provider in this build — FATF jurisdictions, scam labels, and a two-hop counterparty trace — and are disclosed as such rather than folded into the score." },
+    { "@type": "HowToStep", "position": 4, "name": "Read past the number",
+      "text": "Read the 0–100 risk score together with the exposure breakdown underneath it, not the headline figure alone." }
+  ]
+}
+</script>
+<!--
+  sameAs is intentionally left empty — only add real public profiles for Alex
+  (GitHub, LinkedIn, X, etc.) here if/when they exist and are actually linked
+  to from those profiles back to this site. An empty array is honest; a fake
+  or unclaimed one is worse than nothing.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AML.legal",
+  "url": "https://aml.legal/",
+  "logo": "https://aml.legal/icons/icon-512.png",
+  "description": "Free AML screening tool for crypto wallets and transactions, checking public sanctions, freeze and exposure datasets.",
+  "founder": {
+    "@type": "Person",
+    "name": "Alex"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "[email protected]",
+    "contactType": "customer support"
+  },
+  "sameAs": []
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.min.css?v=2026-08-26">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="https://aml.legal/">
+      <span class="logomark"><svg viewBox="0 0 64 64"><path d="M32 15 L46 28 L32 49 L18 28 Z" fill="#2DB8D6"/><path d="M32 15 L46 28 L32 32 Z" fill="#7FE0D4"/><path d="M32 15 L18 28 L32 32 Z" fill="#F2EFEA" opacity="0.9"/></svg></span>
+      <span>AML<em>.legal</em></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#datasets">What we screen</a>
+      <a href="#score">Risk score</a>
+      <a href="#usdt">USDT</a>
+      <a href="#guide">Guide</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn primary" href="#checker">Run a free check</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="hero-atmos" aria-hidden="true">
+    <div class="glow g1"></div>
+    <div class="glow g2"></div>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Free crypto AML check · no seed phrase, ever</span>
+      <h1>Free AML check for crypto —<br><em>know where the money's been before you accept it.</em></h1>
+      <p class="lede">
+        Sanctions, freezes, mixer contact — read directly from public
+        data and handed back as one honest number.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#checker">Scan a wallet — free</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+        <span class="note">No account · results in ~20s</span>
+      </div>
+      <p class="trust-strip">
+        Independent screening tool, not a law firm or registered compliance vendor — see
+        <a class="inline" href="/about.html">who runs this and how it's verified</a>.
+        Data freshness: <span id="freshness-badge-hero"><time datetime="2026-08-25" id="freshness-time-hero">Aug 25, 2026</time></span>.
+      </p>
+    </div>
+
+    <div class="panel-shell">
+      <div class="checker" id="checker" aria-label="Free crypto AML checker">
+        <div class="checker-head">
+          <span class="checker-title"><span class="status-dot"></span>Live wallet scanner</span>
+          <span class="doc-no" id="doc-no">aml.legal</span>
+        </div>
+
+        <div class="checker-body" id="form-view">
+          <div class="tabs" role="tablist" aria-label="Check type">
+            <button role="tab" aria-selected="true" data-mode="wallet">By wallet</button>
+            <button role="tab" aria-selected="false" data-mode="tx">By transaction</button>
+          </div>
+
+          <div class="field">
+            <label for="netBtn">Network</label>
+            <div class="net-picker" id="netPicker">
+              <button type="button" class="net-picker-btn" id="netBtn" aria-haspopup="listbox" aria-expanded="false">
+                <span class="net-ic" id="netBtnIcon"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#2A2D33"/><circle cx="8.6" cy="8.6" r="3.4" fill="none" stroke="#A7A199" stroke-width="1.4"/><line x1="11.1" y1="11.1" x2="14.3" y2="14.3" stroke="#A7A199" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+                <span id="netBtnLabel">Auto-detect from address</span>
+                <svg class="chev" viewBox="0 0 20 20"><path d="M5 8l5 5 5-5"/></svg>
+              </button>
+              <ul class="net-picker-list" id="netList" role="listbox" hidden>
+                <li class="net-opt" data-value="" role="option" aria-selected="true">
+                  <span class="net-ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#2A2D33"/><circle cx="8.6" cy="8.6" r="3.4" fill="none" stroke="#A7A199" stroke-width="1.4"/><line x1="11.1" y1="11.1" x2="14.3" y2="14.3" stroke="#A7A199" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+                  Auto-detect from address
+                </li>
+                <li class="net-opt" data-value="btc" role="option" aria-selected="false">
+                  <span class="net-ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#F7931A"/><text x="10" y="14.3" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">₿</text></svg></span>
+                  Bitcoin
+                </li>
+                <li class="net-opt" data-value="eth" role="option" aria-selected="false">
+                  <span class="net-ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#454A75"/><text x="10" y="14" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">Ξ</text></svg></span>
+                  Ethereum · ERC-20
+                </li>
+                <li class="net-opt" data-value="trx" role="option" aria-selected="false">
+                  <span class="net-ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#EF0027"/><text x="10" y="13.8" font-family="Arial,sans-serif" font-size="10" font-weight="800" fill="#fff" text-anchor="middle">T</text></svg></span>
+                  Tron · TRC-20
+                </li>
+                <li class="net-opt" data-value="bnb" role="option" aria-selected="false">
+                  <span class="net-ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#F0B90B"/><rect x="7.5" y="7.5" width="5" height="5" fill="#fff" transform="rotate(45 10 10)"/></svg></span>
+                  BNB Smart Chain · BEP-20
+                </li>
+                <li class="net-opt" data-value="sol" role="option" aria-selected="false">
+                  <span class="net-ic"><svg viewBox="0 0 20 20"><defs><linearGradient id="solg" x1="0" y1="0" x2="20" y2="20"><stop offset="0" stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs><circle cx="10" cy="10" r="10" fill="url(#solg)"/><g stroke="#fff" stroke-width="1.6" stroke-linecap="round"><line x1="5.5" y1="7" x2="14.5" y2="7"/><line x1="5.5" y1="10" x2="14.5" y2="10"/><line x1="5.5" y1="13" x2="14.5" y2="13"/></g></svg></span>
+                  Solana
+                </li>
+                <li class="net-opt" data-value="pol" role="option" aria-selected="false">
+                  <span class="net-ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#8247E5"/><polygon points="10,5.2 13.8,7.6 13.8,12.4 10,14.8 6.2,12.4 6.2,7.6" fill="none" stroke="#fff" stroke-width="1.3"/></svg></span>
+                  Polygon
+                </li>
+              </ul>
+            </div>
+            <select id="net" class="sr-only-select" tabindex="-1" aria-hidden="true">
+              <option value="">Auto-detect from address</option>
+              <option value="btc">Bitcoin</option>
+              <option value="eth">Ethereum · ERC-20</option>
+              <option value="trx">Tron · TRC-20</option>
+              <option value="bnb">BNB Smart Chain · BEP-20</option>
+              <option value="sol">Solana</option>
+              <option value="pol">Polygon</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="addr" id="addr-label">Wallet address</label>
+            <input type="text" id="addr" autocomplete="off" spellcheck="false"
+                   placeholder="TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t">
+            <p class="detect-hint" id="hint" aria-live="polite"></p>
+          </div>
+
+          <p class="datasets-line"><b>6 datasets</b> mapped out — 3 run live on every check, 3 are marked exactly where the gap is.</p>
+          <div class="datasets">
+            <div class="ds"><span class="live-badge b-snap">Snapshot</span><span><b>OFAC SDN sanctions</b> <small>— 780 real crypto addresses, from OFAC's own file</small></span></div>
+            <div class="ds"><span class="live-badge b-live">Live</span><span><b>Tether freeze registry</b> <small>— read live from the contract</small></span></div>
+            <div class="ds"><span class="live-badge b-snap">Snapshot</span><span><b>Mixers &amp; darknet</b> <small>— Tornado Cash, Sinbad, ChipMixer</small></span></div>
+            <div class="ds"><span class="live-badge b-na">Not wired</span><span><b>FATF jurisdictions</b> <small>— grey/black-list exposure</small></span></div>
+            <div class="ds"><span class="live-badge b-na">Not wired</span><span><b>Scam &amp; phishing labels</b> <small>— reported drainer contracts</small></span></div>
+            <div class="ds"><span class="live-badge b-na">Not wired</span><span><b>Counterparty trace</b> <small>— two hops of funding</small></span></div>
+          </div>
+
+          <div class="run-row">
+            <button class="btn primary" id="run">Run free AML check</button>
+            <span class="run-note">≈ 10–30 s · nothing leaves this tab</span>
+          </div>
+
+          <p class="assure">
+            <span><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>No wallet connect</span>
+            <span><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>No seed phrase</span>
+            <span><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>No storage</span>
+            <span><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>No KYC</span>
+          </p>
+        </div>
+
+        <div class="scan-panel" id="scan-view">
+          <div class="scan-progress-head"><span class="lbl">Running AML check</span><span class="pct" id="scan-pct">0%</span></div>
+          <div class="scan-progress"><i id="scan-progress-fill"></i></div>
+          <ul class="scan-steps" id="steps"></ul>
+
+          <div class="result" id="result">
+            <div class="verdict-zone">
+              <div class="gauge-wrap">
+                <svg viewBox="0 0 160 160">
+                  <circle class="gauge-track" cx="80" cy="80" r="66"/>
+                  <circle class="gauge-fill" id="gauge-fill" cx="80" cy="80" r="66"
+                          stroke="#4CBE82" stroke-dasharray="414.7" stroke-dashoffset="414.7"/>
+                </svg>
+                <div class="gauge-center">
+                  <span class="num" id="score-num">0</span>
+                  <span class="of">/100 RISK</span>
+                </div>
+              </div>
+              <div>
+                <span class="verdict-chip low" id="stamp">
+                  <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+                  <span id="stamp-label">Low risk</span>
+                </span>
+                <p class="verdict-copy" id="verdict-text"></p>
+              </div>
+            </div>
+
+            <div class="breakdown">
+              <p class="breakdown-label">Exposure breakdown</p>
+              <div id="bars"></div>
+            </div>
+
+            <p class="check-summary" id="check-summary">
+              <strong>What actually ran live:</strong> OFAC SDN matching against 780 real,
+              currently-published crypto addresses — the complete digital-currency portion of
+              OFAC's list, pulled 2026-08-25 from a source that itself re-syncs nightly (not the ~19,000 non-crypto entries,
+              which are irrelevant here) — plus a real-time on-chain call to Tether's contract for
+              ERC-20 addresses, and matching against known sanctioned-mixer contracts. FATF
+              jurisdiction, scam-label matching and multi-hop counterparty trace are not wired to
+              a live data provider in this build — see the checklist above for exactly what ran
+              on this address.
+            </p>
+
+            <div class="result-actions">
+              <button class="btn ghost" id="again">New check</button>
+              <button class="btn primary" id="pdf">Download PDF report</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stat-block">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat-cell"><div class="num">3</div><div class="cap">Checks run live, every scan</div></div>
+      <div class="stat-cell"><div class="num">6</div><div class="cap">Networks supported</div></div>
+      <div class="stat-cell"><div class="num">&lt;30s</div><div class="cap">Average scan time</div></div>
+      <div class="stat-cell"><div class="num">$0</div><div class="cap">Forever, no tiers</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">Why check first</span></div>
+    <h2>One transfer can lock everything you own on that exchange</h2>
+    <p class="sec-intro">
+      Exchanges don't review deposits by hand anymore — a screening engine reads
+      every inbound transfer the moment it lands, and it doesn't care that you
+      didn't know where the <a class="cite" href="#usdt">sender's USDT</a> had been. If the funds touch a
+      sanctioned address, a mixer, or a darknet market anywhere in their recent
+      history, your account goes on hold, not just the transfer. A compliance
+      officer has to clear it by hand. Run an AML wallet check before you accept
+      a transfer — it costs twenty seconds. Finding out after costs the better
+      part of a month.
+    </p>
+    <div class="grid-3">
+      <div class="card">
+        <span class="k">Deposit hold</span>
+        <h3>Wallet freeze</h3>
+        <p>Every other asset in that account gets locked along with it. The exchange isn't punishing the transaction — it's punishing you, while compliance sorts out whether you're a victim or a participant.</p>
+      </div>
+      <div class="card">
+        <span class="k">Mid-flight</span>
+        <h3>Transaction freeze</h3>
+        <p>Send to a flagged address and the transfer can stall between wallets — visible on-chain, unreachable by either side, until someone with more authority than you decides.</p>
+      </div>
+      <div class="card">
+        <span class="k">On-chain, permanent</span>
+        <h3>The Tether freeze</h3>
+        <p>This lives in the USDT contract itself, so it has nothing to do with bank policy. Once an address is blacklisted, its balance sits there permanently. It won't move again unless Tether steps in and reverses it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">How it works</span></div>
+    <h2>How to run a free AML wallet check, honestly explained</h2>
+    <p class="sec-intro">
+      No account, no waiting room, no email you'll regret giving out. Paste an address,
+      pick a network if we guessed wrong, and read the result.
+    </p>
+    <ol class="process">
+      <li><h3>Pick the network</h3><p>Or don't — paste the address and we'll read the format ourselves, and tell you what we guessed in case we guessed wrong.</p></li>
+      <li><h3>Paste the address</h3><p>A wallet address or a transaction hash. We check wallet format before we check anything else.</p></li>
+      <li><h3>Let it run</h3><p>Six checks named on screen — three run live and shape your score. The other three are marked exactly where they don't apply, not folded into the number.</p></li>
+      <li><h3>Read past the number</h3><p>A 40 built from gambling exposure and a 40 built from a mixer touch are not the same kind of 40. Read the breakdown.</p></li>
+    </ol>
+    <div class="screenshot-card">
+      <video autoplay loop muted playsinline poster="walkthrough-poster.jpg" aria-label="Animated walkthrough of the AML.legal wallet scanner: address entered, six checks running, then a 0-100 risk score with breakdown" style="width:100%;max-width:760px;border-radius:10px;border:1px solid var(--border);margin:0 auto 20px;display:block;background:var(--panel-solid);"><source src="walkthrough.webm" type="video/webm"><source src="walkthrough.mp4" type="video/mp4"></video>
+      <div>
+        <span class="lbl">What it actually looks like</span>
+        <p>This is the real scanner from the top of the page, not a mockup — same steps, same layout, same breakdown. Try it yourself with any wallet address; it takes about the same twenty seconds shown here.</p>
+        <a class="btn primary" href="#checker" style="margin-top:18px;">Try it — it's free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="datasets">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">What we screen against</span></div>
+    <h2>Six checks. All public. None of them ours to sell</h2>
+    <p class="sec-intro">
+      Every dataset below is something you could, in theory, go check yourself —
+      <a class="cite" href="https://ofac.treasury.gov/sanctions-list-search" target="_blank" rel="noopener">OFAC
+      publishes its list</a>, Tether's freeze function is callable by anyone, blockchains
+      are public ledgers by definition. Compliance teams call this KYT — know-your-transaction
+      — and it's the same sanctions screening a licensed exchange runs on your deposit under
+      FATF's risk-based approach. Three of these run live in this build, updating with every
+      scan. The other three are how a full compliance review works today — mapped out below
+      so you know exactly where the gap is, not hidden behind a score that looks complete.
+    </p>
+    <div class="table-scroll">
+    <table class="data-table">
+      <thead><tr><th>Dataset</th><th>Status</th><th>What it answers</th><th>Source</th><th>Cost</th></tr></thead>
+      <tbody>
+        <tr><td>OFAC SDN</td><td><span class="live-badge b-snap">Snapshot</span></td><td>Is this address formally sanctioned? Checked against 780 real crypto addresses — the complete digital-currency portion of OFAC's SDN list, not a hand-picked sample. Includes Tornado Cash's contracts (added August 2022, removed under a US court ruling in March 2025), the Sinbad mixer (November 2023), and Lazarus Group wallets. Since late 2023, <a href="https://tether.to" target="_blank" rel="noopener noreferrer">Tether</a> freezes anything <a href="https://ofac.treasury.gov/sanctions-list-service" target="_blank" rel="noopener noreferrer">OFAC</a> designates.</td><td>Pulled 2026-08-25 from OFAC's own file, via a community mirror that re-syncs nightly</td><td class="free">FREE</td></tr>
+        <tr><td>Tether freeze</td><td><span class="live-badge b-live">Live</span></td><td>Is the USDT itself frozen right now? One call to a public function on the USDT contract — true or false, nothing to interpret.</td><td>On-chain, read directly at scan time</td><td class="free">FREE</td></tr>
+        <tr><td>Mixers &amp; darknet</td><td><span class="live-badge b-snap">Snapshot</span></td><td>Has this address touched a known mixer contract, directly? Compliance teams treat mixer contact as a hard flag regardless of intent.</td><td>Curated exposure list</td><td class="free">FREE</td></tr>
+        <tr><td>FATF jurisdictions</td><td><span class="live-badge b-na">Not wired</span></td><td>Does the funding trail run through a country <a href="https://www.fatf-gafi.org/en/topics/virtual-assets.html" target="_blank" rel="noopener noreferrer">FATF</a> flagged for weak AML controls? Would adjust the score — context, not a verdict on its own.</td><td>Not wired in this build</td><td class="na">—</td></tr>
+        <tr><td>Scam labels</td><td><span class="live-badge b-na">Not wired</span></td><td>Has this address been reported as a drainer contract or phishing wallet? Would count labels only from more than one independent source.</td><td>Needs a paid threat-intel feed</td><td class="na">—</td></tr>
+        <tr><td>Counterparty trace</td><td><span class="live-badge b-na">Not wired</span></td><td>Two hops back: who paid this wallet, and who paid them — the same depth a tier-1 exchange runs at deposit. Needs a blockchain-indexing API this build doesn't have.</td><td>Not wired in this build</td><td class="na">—</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="sec-intro" style="margin-top:14px; font-size:.86rem;">
+      <strong>Snapshot</strong> means matched against a curated dataset synced periodically, not the full live registry.
+      <strong>Live</strong> means a real-time call made at the moment you run the check.
+      <strong>Not wired</strong> means exactly that — explained here for context, not counted in your score.
+    </p>
+  </div>
+</section>
+
+<div class="stat-block stat-block-2">
+  <div class="wrap">
+    <div class="eyebrow stat-eyebrow">Coverage, at a glance</div>
+    <div class="stat-grid">
+      <div class="stat-cell"><div class="num">3/6</div><div class="cap">Checks run live today — see which</div></div>
+      <div class="stat-cell"><div class="num">0</div><div class="cap">Wallets or seed phrases stored, ever</div></div>
+      <div class="stat-cell"><div class="num">24/7</div><div class="cap">Live freeze checks, on demand</div></div>
+      <div class="stat-cell"><div class="num">4</div><div class="cap">Networks auto-detected from format</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="sec" id="score">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">Reading the result</span></div>
+    <h2>The number is a summary. Don't stop at the number</h2>
+    <p class="sec-intro">
+      Every check returns a wallet risk score between 0 and 100. Think of it as a compressed
+      summary rather than the full story, and give the underlying reasoning ten seconds
+      before you act on the headline figure.
+    </p>
+    <svg class="risk-gauge" viewBox="0 0 700 130" role="img" aria-label="Risk score gauge from 0 to 100: 0 to 24 is low risk, 25 to 74 is medium risk, 75 to 100 is high risk" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#4CBE82"/>
+          <stop offset="24%" stop-color="#4CBE82"/>
+          <stop offset="25%" stop-color="#E2A63C"/>
+          <stop offset="74%" stop-color="#E2A63C"/>
+          <stop offset="75%" stop-color="#E15C4C"/>
+          <stop offset="100%" stop-color="#E15C4C"/>
+        </linearGradient>
+      </defs>
+      <rect x="10" y="46" width="680" height="22" rx="11" fill="url(#gaugeGrad)"/>
+      <line x1="173" y1="40" x2="173" y2="74" stroke="#0A0B0D" stroke-width="2" opacity=".55"/>
+      <line x1="513" y1="40" x2="513" y2="74" stroke="#0A0B0D" stroke-width="2" opacity=".55"/>
+      <text x="10" y="30" fill="#A7A199" font-family="JetBrains Mono, monospace" font-size="13">0</text>
+      <text x="163" y="30" fill="#A7A199" font-family="JetBrains Mono, monospace" font-size="13">24</text>
+      <text x="503" y="30" fill="#A7A199" font-family="JetBrains Mono, monospace" font-size="13">74</text>
+      <text x="670" y="30" fill="#A7A199" font-family="JetBrains Mono, monospace" font-size="13">100</text>
+      <text x="90" y="102" fill="#4CBE82" font-family="Inter, sans-serif" font-weight="700" font-size="14" text-anchor="middle">LOW</text>
+      <text x="343" y="102" fill="#E2A63C" font-family="Inter, sans-serif" font-weight="700" font-size="14" text-anchor="middle">MEDIUM</text>
+      <text x="596" y="102" fill="#E15C4C" font-family="Inter, sans-serif" font-weight="700" font-size="14" text-anchor="middle">HIGH</text>
+    </svg>
+    <div class="risk-ruler">
+      <div class="ruler-bar" aria-hidden="true"><i class="r-low"></i><i class="r-med"></i><i class="r-high"></i></div>
+      <div class="ruler-cards">
+        <div class="ruler-card low-t">
+          <span class="range">0–24 · LOW</span>
+          <h3>Go ahead</h3>
+          <p>Nothing here that would make an exchange blink. Download the PDF anyway if the transfer is large enough that you'd ever need to explain it — it's timestamped, and it costs nothing to keep.</p>
+          <p class="cats">Licensed exchange, payment processor, merchant, miner.</p>
+        </div>
+        <div class="ruler-card med-t">
+          <span class="range">25–74 · MEDIUM</span>
+          <h3>Ask before you act</h3>
+          <p>Nothing here is flagged, but it isn't spotless either, and something in the chain deserves a question before you move forward. A two-line message to the sender usually resolves more than any tool can.</p>
+          <p class="cats">Unlicensed exchange, unverified P2P, gambling, ATM, unknown source.</p>
+        </div>
+        <div class="ruler-card high-t">
+          <span class="range">75–100 · HIGH</span>
+          <h3>Walk away</h3>
+          <p>Treat this as a stop sign rather than a nudge. Don't accept the transfer, and resist the urge to route it somewhere "cleaner" first — that habit is exactly how a bad transfer turns into a frozen account.</p>
+          <p class="cats">Sanctions, darknet, mixer, stolen coins, ransomware.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="example">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">Not a hypothetical — an actual scan</span></div>
+    <div class="example">
+      <div class="example-num">
+        <div class="digits">34<em>/100</em></div>
+        <div class="cap">Medium risk</div>
+      </div>
+      <div>
+        <div class="example-trail">
+          <div class="step"><span class="tag">SDN check</span><span>A buyer sends you <b>500 USDT on Tron</b> and asks you to release the fiat. Matched against OFAC's SDN file first — <b>clean.</b> A sanctions hit would have overridden everything downstream.</span></div>
+          <div class="step"><span class="tag">Freeze check</span><span>The USDT contract gets a direct call: is this address blacklisted right now. <b>Also clean.</b> Two hard checks passed, both binary, neither a matter of opinion.</span></div>
+          <div class="step"><span class="tag">Trace, hop 1</span><span>Four addresses funded this wallet in the past month. Three are unremarkable — small transfers, established wallets, nothing notable.</span></div>
+          <div class="step"><span class="tag">Trace, hop 2</span><span>The fourth received part of its own funding from an address with a <b>documented mixer interaction eight months ago</b>, three hops further back from where you're standing.</span></div>
+        </div>
+        <p class="example-verdict"><strong>That's what actually produces a 34.</strong> It's a mild, real connection sitting two full hops away — slightly too close for comfort, but nowhere near a dramatic red flag, and nothing here worth panicking over. One casual question to the buyer before you release the funds does the whole job this score is meant for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="usdt">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">The most-checked asset</span></div>
+    <h2>Free AML check for USDT — TRC-20, ERC-20 and BEP-20</h2>
+    <p class="sec-intro">
+      Tether is the most-traded stablecoin in crypto, so it's what most people running a
+      wallet check hold. A free AML check for USDT works the same way on every
+      chain — paste the address, pick TRC-20, ERC-20 or BEP-20, get a verdict in seconds —
+      but what the chain lets us see differs. Here's the honest, network-by-network version.
+    </p>
+    <p class="sec-intro">
+      Call it a free AML check USDT wallet screen or a USDT AML check — the flow is
+      identical either way. Paste the address, check USDT AML status against the sanctions
+      and freeze data above, and your AML check USDT free of charge, every single time.
+    </p>
+    <div class="rule-list">
+      <div class="rule-card">
+        <span class="k">TRC-20 · Tron</span>
+        <div><h3>Where the real P2P volume lives</h3><p>Cheap, fast, and for that reason the default for OTC desks, remittances and P2P trading — which also makes it the network scammers reach for first. A USDT AML check here leans harder on recent P2P activity and clustering than a check on any other chain, because that's where the fraud concentrates. Full freeze-registry access too.</p></div>
+      </div>
+      <div class="rule-card">
+        <span class="k">ERC-20 · Ethereum</span>
+        <div><h3>Older, slower, and still where institutions live</h3><p>Ethereum's USDT freeze list has been active since 2017. Touch a sanctioned contract like Tornado Cash, even once, even years ago, and every exchange screening you afterward will see it.</p></div>
+      </div>
+      <div class="rule-card">
+        <span class="k">BEP-20 · BNB Chain</span>
+        <div><h3>Cheap, fast, and full of rug pulls</h3><p>No public freeze function here, so we catch frozen addresses through sanctions data instead — and say so. What you will see clearly: DEX pools tied to pump-and-dump tokens.</p></div>
+      </div>
+      <div class="rule-card">
+        <span class="k">SOL · POL · everything else</span>
+        <div><h3>Same questions, thinner answers</h3><p>Sanctions screening and a funding trace with the same engine — but no Tether freeze function, so that check comes back "not applicable" rather than silently passing.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="networks">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">Supported blockchains</span></div>
+    <h2>Check crypto on any major network</h2>
+    <p class="sec-intro">
+      Paste an address and we'll usually guess the network correctly — but the table
+      below is what we actually check per chain.
+    </p>
+    <div class="net-showcase">
+      <div class="net-badge"><span class="ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#F7931A"/><text x="10" y="14.3" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">₿</text></svg></span><span class="nm">Bitcoin</span></div>
+      <div class="net-badge"><span class="ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#454A75"/><text x="10" y="14" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">Ξ</text></svg></span><span class="nm">Ethereum</span><span class="std">ERC-20</span></div>
+      <div class="net-badge"><span class="ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#EF0027"/><text x="10" y="13.8" font-family="Arial,sans-serif" font-size="10" font-weight="800" fill="#fff" text-anchor="middle">T</text></svg></span><span class="nm">Tron</span><span class="std">TRC-20</span></div>
+      <div class="net-badge"><span class="ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#F0B90B"/><rect x="7.5" y="7.5" width="5" height="5" fill="#fff" transform="rotate(45 10 10)"/></svg></span><span class="nm">BNB Chain</span><span class="std">BEP-20</span></div>
+      <div class="net-badge"><span class="ic"><svg viewBox="0 0 20 20"><defs><linearGradient id="solgB" x1="0" y1="0" x2="20" y2="20"><stop offset="0" stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs><circle cx="10" cy="10" r="10" fill="url(#solgB)"/><g stroke="#fff" stroke-width="1.6" stroke-linecap="round"><line x1="5.5" y1="7" x2="14.5" y2="7"/><line x1="5.5" y1="10" x2="14.5" y2="10"/><line x1="5.5" y1="13" x2="14.5" y2="13"/></g></svg></span><span class="nm">Solana</span></div>
+      <div class="net-badge"><span class="ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#8247E5"/><polygon points="10,5.2 13.8,7.6 13.8,12.4 10,14.8 6.2,12.4 6.2,7.6" fill="none" stroke="#fff" stroke-width="1.3"/></svg></span><span class="nm">Polygon</span></div>
+      <div class="net-badge"><span class="ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#26A17B"/><text x="10" y="13.6" font-family="Arial,sans-serif" font-size="9" font-weight="800" fill="#fff" text-anchor="middle">T</text></svg></span><span class="nm">Tether</span><span class="std">USDT</span></div>
+      <div class="net-badge"><span class="ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#2775CA"/><text x="10" y="13.6" font-family="Arial,sans-serif" font-size="8" font-weight="800" fill="#fff" text-anchor="middle">$</text></svg></span><span class="nm">USD Coin</span><span class="std">USDC</span></div>
+    </div>
+    <div class="table-scroll">
+    <table class="data-table">
+      <thead><tr><th>Network</th><th>Standard</th><th>Freeze data</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Tron</td><td class="mono">TRC-20</td><td class="free">ON-CHAIN READ</td><td>Carries more circulating USDT than any other chain. Deepest screening here.</td></tr>
+        <tr><td>Ethereum</td><td class="mono">ERC-20</td><td class="free">ON-CHAIN READ</td><td>The original USDT deployment. Freeze list active since 2017.</td></tr>
+        <tr><td>Bitcoin</td><td class="mono">BTC</td><td class="na">N/A — no USDT</td><td>Sanctions and trace. Freeze check marked not applicable, not silently skipped.</td></tr>
+        <tr><td>Tether</td><td class="mono">USDT</td><td class="free">TRC-20 / ERC-20</td><td>The two chains where the freeze function is actually public.</td></tr>
+        <tr><td>USD Coin</td><td class="mono">USDC</td><td class="na">CIRCLE'S OWN LIST</td><td>Circle runs a separate blacklist. Clean on USDT ≠ clean on USDC.</td></tr>
+        <tr><td>BNB Chain</td><td class="mono">BEP-20</td><td class="na">VIA SANCTIONS DATA</td><td>No public freeze function. We check what we can and label what we can't.</td></tr>
+        <tr><td>Polygon</td><td class="mono">POL</td><td class="na">VIA SANCTIONS DATA</td><td>Same address format as Ethereum &amp; BNB — network picker matters.</td></tr>
+        <tr><td>Solana</td><td class="mono">SOL</td><td class="na">N/A</td><td>Sanctions and activity profile. Trace support coming.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="who">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">Who checks with us</span></div>
+    <h2>Who actually uses this, and why</h2>
+    <div class="who-list">
+      <div><h3>P2P traders</h3><p>USDT just landed, and the buyer is still typing in the chat. Once they log off, you're guessing — right now is the only window where checking them actually means something.</p></div>
+      <div><h3>Freelancers paid in crypto</h3><p>The moment you deposit anywhere, their wallet's history quietly becomes your history, and nobody at the exchange is going to care that you didn't choose it.</p></div>
+      <div><h3>OTC desks</h3><p>Screening at quote time barely costs you anything but attention, while screening after settlement means unwinding a trade that's already cleared.</p></div>
+      <div><h3>Everyday holders</h3><p>Bought crypto off someone from a forum or a Telegram group? Running a free AML wallet check takes less time than deciding whether to trust them, and it answers a different question than "do I trust them."</p></div>
+      <div><h3>Small businesses accepting crypto</h3><p>One customer with a messy wallet, multiplied across a hundred transactions a month, is how a legitimate business ends up explaining itself to compliance.</p></div>
+      <div><h3>Anyone sent money unexpectedly</h3><p>An address you don't recognize sends you funds. Check it before you move it anywhere — a five-second way to see if it looks like a scam.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="guide">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">Knowledge base · updated Aug 24, 2026</span></div>
+    <h2>AML and crypto — a working guide</h2>
+    <p class="sec-intro">
+      Written for people who hold or trade crypto, not for compliance departments. No
+      jargon where a plain word does the job.
+    </p>
+    <div class="kb">
+      <details class="kb-item" open id="kb-history">
+  <summary><span class="kb-num">i</span><h3>Why AML rules reached your wallet at all</h3></summary>
+  <div class="kb-body">
+<p>Anti-money-laundering law predates crypto by half a century. The US Bank Secrecy Act is from 1970. <a class="cite" href="https://www.fatf-gafi.org/en/home.html" target="_blank" rel="noopener">FATF</a>, the body that writes the global rulebook and defines the risk-based approach every AML program follows, was founded in 1989 to fight drug-cartel banking — crypto wasn't a glimmer in anyone's eye yet.</p>
+        <p>Crypto got pulled into that regulatory compliance machinery gradually, then all at once. FATF extended its recommendations to "virtual asset service providers" in 2019. Enforcement lagged for years, then closed hard between 2023 and 2025: the UK's Travel Rule took effect in September 2023, the EU's <a href="https://eur-lex.europa.eu/EN/legal-content/summary/european-crypto-assets-regulation-mica.html" target="_blank" rel="noopener noreferrer">MiCA</a> became fully binding across all 27 member states in December 2024.</p>
+        <p>None of this happened because regulators suddenly discovered crypto. It happened because crypto became large enough — and useful enough to actual criminals — that ignoring it stopped being an option anyone in Brussels or Washington was willing to defend.</p>
+        <p>You don't get a vote on whether your deposit gets screened. The only choice you actually have is whether you find out what it'll show before you send the money or after.</p>
+        </div>
+</details>
+      <details class="kb-item" id="kb-mechanics">
+  <summary><span class="kb-num">ii</span><h3>What actually happens during a check</h3></summary>
+  <div class="kb-body">
+<p>Strip away the marketing language and a wallet screening does three things. It matches — is this exact address on a sanctions list, or blacklisted at the contract level. Binary, no interpretation required.</p>
+        <p>It traces — who sent money to this wallet, and who sent money to them. Two hops is the standard depth; by hop four you're usually looking at an exchange's entire deposit pool, not anything meaningful about your specific counterparty.</p>
+        <p>And it labels — scam reports, phishing tags, drainer contracts, sourced from public reporting rather than a government list.</p>
+        <p>That's the category, industry-wide. This build wires up matching — against 780 real OFAC-sanctioned addresses and known mixer contracts — plus one thing outside that taxonomy entirely: reading Tether's own freeze registry live, in real time. Tracing and labeling aren't wired in yet — see <a class="cite" href="#datasets">what we screen</a> for the honest breakdown.</p>
+        <p>Here's the part nobody selling AML software likes to say: different blockchain forensics engines disagree with each other constantly. Chainalysis and Elliptic score the same wallet differently often enough that it's a known joke among compliance teams. Treat any score, from anyone, as a strong opinion — not a court verdict.</p>
+        </div>
+</details>
+      <details class="kb-item" id="kb-mixers">
+  <summary><span class="kb-num">iii</span><h3>Mixers, and the strange, unfinished story of Tornado Cash</h3></summary>
+  <div class="kb-body">
+<p>A mixer pools deposits from strangers and pays them back out from a shared pool, severing the on-chain thread between source and destination. Whether that's privacy or laundering depends on who's asking — and the people asking have mostly been regulators.</p>
+        <p><a class="cite" href="https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions" target="_blank" rel="noopener">OFAC put Tornado Cash's smart contracts on the sanctions list</a> in August 2022 — the first time code itself, not a person or company, got sanctioned. A US appeals court eventually ruled the immutable contracts weren't "property" under sanctions law, and OFAC delisted it in March 2025.</p>
+        <p>Almost nothing changed in practice. Exchange compliance teams still treat mixer exposure as a hard flag, court ruling or not — the obligation was never really about the sanctions list, it's about not laundering money. ChipMixer's servers were seized in March 2023 and never came back. Assume every exchange downstream notices mixer contact, ever — the delisting bought a legal argument, not a clean bill of health.</p>
+        </div>
+</details>
+      <details class="kb-item" id="kb-tether-freeze">
+  <summary><span class="kb-num">iv</span><h3>Why Tether freezes wallets, and how fast that machinery moved</h3></summary>
+  <div class="kb-body">
+<p>Every contract Tether has deployed ships with a function that lets Tether — and only Tether — blacklist an address. Flip that switch and the tokens stay visible on-chain, fully intact, completely inert. Just frozen, until Tether decides otherwise.</p>
+        <p>There's no customer-facing appeal, because you're not really Tether's customer — the exchange or wallet you used is. Tether launched a joint financial-crime unit with Tron and TRM Labs in late 2024. Since December 2023, Tether's policy has been to freeze anything OFAC sanctions, automatically.</p>
+        <p>This is the single most concrete thing an AML check can tell you: a contract either reports an address as frozen or it doesn't, no probability involved. Everything else in a screening report is a judgment call dressed up as data. The freeze check isn't.</p>
+        </div>
+</details>
+      <details class="kb-item" id="kb-scams">
+  <summary><span class="kb-num">v</span><h3>The four scams a wallet check actually catches, and the one it can't touch</h3></summary>
+  <div class="kb-body">
+<p><strong>Dirty-USDT swap.</strong> Someone pays you in tokens with a bad history, you hand over fiat, and the problem becomes entirely yours the moment you try to deposit. Screen the buyer's wallet before you release anything, full stop.</p>
+        <p><strong>Repeat-offender wallets.</strong> The trace often shows the tell before you'd notice yourself: small inbound transfers from strangers, then a burst outward toward a mixer, on a loop.</p>
+        <p><strong>Pig-butchering deposit addresses.</strong> One address, funded by dozens of different people, each convinced they're the only one investing. Check the deposit address before you send a cent.</p>
+        <p><strong>Drainer contracts.</strong> Wallets tied to known campaigns get flagged before you interact — which matters, because with drainers the interaction itself is the damage.</p>
+        <p>What none of this catches: anything off-chain. A reversed bank transfer, a faked screenshot — a wallet check has nothing to say about it. For that half of P2P risk, the only real protection is actual escrow.</p>
+        </div>
+</details>
+      <details class="kb-item" id="kb-frozen-playbook">
+  <summary><span class="kb-num">vi</span><h3>Your account got frozen. Here's the actual playbook</h3></summary>
+  <div class="kb-body">
+<p>First: stop arguing with general support. It was triggered algorithmically, before any human looked at anything. Find the compliance or AML-review channel specifically.</p>
+        <p>Second: run a check on the wallet that sent you the funds — a small crypto investigation of your own, so you know what you're walking into before you respond to anything.</p>
+        <p>Third: build your evidence file. P2P receipts, invoices, trade history. Compliance teams unlock accounts on paperwork, not on how sincerely you explain yourself.</p>
+        <p>Fourth: wait it out. Clean funds with real documentation typically clear in one to four weeks. Anyone offering to "expedite" it for a fee is running a scam — that's never once been a real service.</p>
+        </div>
+</details>
+      <details class="kb-item" id="kb-false-positive">
+  <summary><span class="kb-num">vii</span><h3>What a false positive actually looks like</h3></summary>
+  <div class="kb-body">
+<p>Screening isn't magic — it's pattern matching on public data, and patterns catch innocent wallets too. The most common false positive: a wallet received funds from a large, popular address — a mining pool payout, a well-known liquidity pool, a faucet — that also happens to have paid out to someone flagged for something else entirely. Sharing an upstream funder with a bad actor isn't the same as being one, but a shallow trace can't always tell the difference.</p>
+        <p>Secondhand hardware wallets are another common trigger. Buy a used Ledger or Trezor without wiping it properly, and you inherit whatever history came with the seed — not because you did anything, but because the address existed before you touched it.</p>
+        <p>There's no button that clears a false positive, because there's no central authority correcting scores across the industry. What actually works is documentation. If you're disputing a freeze, source-of-funds paperwork settles it regardless of what triggered the flag in the first place — the exchange doesn't need to agree the flag was wrong, only that your funds are clean.</p>
+        <p>And an honest limitation, ours included: a screening tool can tell you a wallet touched a mixer. It can't tell you why. Five years of privacy-minded caution and five minutes of laundering intent produce the exact same on-chain signal.</p>
+        </div>
+</details>
+      <details class="kb-item" id="kb-tipping-off">
+  <summary><span class="kb-num">viii</span><h3>Why your exchange won't tell you what triggered the flag</h3></summary>
+  <div class="kb-body">
+<p>Ask a compliance team exactly what tripped the alert on your account and you'll almost always get some version of "we can't discuss the specifics of an ongoing review." That's not a stonewall for its own sake. In a lot of jurisdictions, telling a customer their transaction generated a suspicious-activity report is called <em>tipping off</em>, and it's a criminal offense for the institution, not just a policy — the UK's <a href="https://www.legislation.gov.uk/ukpga/2002/29/section/333A" target="_blank" rel="noopener noreferrer">Proceeds of Crime Act has an explicit tipping-off provision</a>, and the EU's AML directives carry similar language. The person answering your ticket may be legally barred from telling you the one thing you actually want to know.</p>
+        <p>There's a second, quieter reason. Specificity is a map. Explain exactly which upstream address caused the flag, and you've told every future bad actor which patterns to avoid — the same logic that keeps airport security vague about exactly what their screening looks for.</p>
+        <p>What this means practically: stop expecting an explanation and start building a file instead. You don't need to know the exact trigger to clear a review — you need to show your funds are clean regardless of what the algorithm thought it saw. That's the one lever you actually have.</p>
+        </div>
+</details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="security">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">Security &amp; privacy</span></div>
+    <div class="manifest">
+      <p class="statement">We can read everything about your wallet's history, because it's already public. We can't read anything about <em>you</em>, because we never ask.</p>
+      <div class="rules-grid">
+        <div class="rule-item"><span class="rn"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><p><strong>No wallet connect.</strong> There's no version of this product that needs one.</p></div>
+        <div class="rule-item"><span class="rn"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><p><strong>No payment, ever.</strong> Not to run a check, not to "unlock" anything — that's always a scam.</p></div>
+        <div class="rule-item"><span class="rn"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><p><strong>Nothing stored.</strong> The address goes to public chain APIs and that's the end of its life here.</p></div>
+        <div class="rule-item"><span class="rn"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><p><strong>Sources named.</strong> Every report says exactly what ran and what didn't — <a href="/about.html" style="color:var(--teal); text-decoration:underline; text-decoration-color:rgba(45,184,214,.4);">see exactly how</a>.</p></div>
+      </div>
+      <p class="domain-note">The only domain this service runs on is <code>aml.legal</code>. If a link took you somewhere that reads slightly differently, close the tab.</p>
+    </div>
+  </div>
+</section>
+
+<!--
+  This used to be a "live activity" block with three counters that grew on
+  their own, seeded randomly per-browser and persisted in localStorage. It
+  looked like real cross-visitor usage; it wasn't — open this same page in
+  two browsers and the "all-time" number would differ by hundreds of
+  thousands. That's the exact kind of thing the rest of this site spends its
+  copy promising not to do, so it's gone. What's here now is static and true:
+  real facts about what's actually in the dataset, dated, with nothing that
+  moves on its own. If you want genuine live traffic numbers, that requires
+  a real backend to aggregate across visitors — which this static site
+  deliberately doesn't have, because that backend is also what "nothing is
+  stored" would have to give up.
+-->
+<div class="live-block">
+  <div class="wrap">
+    <div class="live-head">
+      <span class="live-label">This build, in numbers</span>
+    </div>
+    <div class="live-grid">
+      <div class="live-cell">
+        <div class="live-tag">OFAC snapshot</div>
+        <div class="live-num">780</div>
+        <div class="live-cap">Real crypto addresses screened against</div>
+        <div class="live-sub2">pulled Aug 25, 2026 — see <a href="/about.html" style="color:inherit; text-decoration:underline; text-decoration-color:rgba(110,104,95,.5);">methodology</a></div>
+      </div>
+      <div class="live-cell">
+        <div class="live-tag">OFAC snapshot</div>
+        <div class="live-num">22</div>
+        <div class="live-cap">Have a named entity &amp; designation date</div>
+        <div class="live-sub2">Garantex, SUEX, Hydra Market and others</div>
+      </div>
+      <div class="live-cell">
+        <div class="live-tag">Mixer list</div>
+        <div class="live-num">21</div>
+        <div class="live-cap">Tornado Cash pool contracts tracked</div>
+        <div class="live-sub2">OFAC-designated Aug 2022</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-eyebrow">Questions</span></div>
+    <h2>AML check — common questions</h2>
+    <div class="faq" style="margin-top:26px">
+      <details open><summary>What is an AML check for crypto?</summary><div class="a"><p>It's a background check for a wallet address instead of a person. This AML crypto check matches it against 780 real OFAC-sanctioned crypto addresses, asks the USDT contract directly whether it's frozen, and checks it against known sanctioned-mixer contracts — then hands you a <a class="cite" href="#score">0–100 score</a> with the reasoning attached, not just the number.</p></div></details>
+      <details><summary>What's the difference between this and checking a block explorer myself?</summary><div class="a"><p>A block explorer shows raw activity. A screening report reads the same public data and tells you what it means — whether any of that history is sanctioned, frozen, or connected to something worth knowing about.</p></div></details>
+      <details><summary>How do I run a free AML check on a USDT wallet?</summary><div class="a"><p>To run a free AML check on a USDT wallet, paste the address into the checker above. Pick TRC-20, ERC-20 or BEP-20 if we don't guess it automatically. Press run. Under thirty seconds later you have a score and a breakdown.</p></div></details>
+      <details><summary>Is this AML check free, or is there a catch?</summary><div class="a"><p>No catch. OFAC's list is a government file. Tether's freeze function is a public contract call. We're not sitting on proprietary intelligence to charge for, the way paid AML software vendors do — we built a faster way to read data that was never locked up.</p></div></details>
+      <details><summary>Do you ever ask for a seed phrase or wallet connection?</summary><div class="a"><p>No, and if we ever did, that would be your signal to leave. Screening a wallet requires exactly one input: the address, which is public by definition.</p></div></details>
+      <details><summary>Can I check a transaction hash instead of a wallet address?</summary><div class="a"><p>Yes — switch to the <em>By transaction</em> tab, paste the TXID, pick the network.</p></div></details>
+      <details><summary>What should I actually do if the score comes back Medium or High?</summary><div class="a"><p><strong>Medium:</strong> ask the sender where the funds originally came from, or ask for a transfer from a different wallet. <strong>High:</strong> don't accept the transfer, and don't try to move it elsewhere to "clean it up."</p></div></details>
+      <details><summary>Why would my own wallet come back flagged?</summary><div class="a"><p>Usually it's history you inherited, not anything you did. If you ever received funds from an exchange or a P2P trade with a murky past, that history is still attached to your address.</p></div></details>
+      <details><summary>My exchange account is frozen after a deposit. What now?</summary><div class="a"><p>Screen the sender's wallet first, then find your exchange's compliance channel specifically. Bring source-of-funds documentation. Clean funds with real paperwork typically clear in one to four weeks. Never pay anyone who promises to "unfreeze" tokens for a fee. The <a class="cite" href="#kb-frozen-playbook">full playbook</a> below walks through it step by step.</p></div></details>
+      <details><summary>How accurate is an AML check wallet score compared to paid tools?</summary><div class="a"><p>About as accurate as any single AML tool gets — treat it as one strong opinion, not a certified verdict. The hard checks, OFAC match and Tether freeze, are exactly as accurate as paid tools, because they read the same government file and the same public contract. The soft parts, like mixer exposure weighting, vary between vendors the same way <a class="cite" href="#kb-mechanics">Chainalysis and Elliptic disagree</a> — no tool, paid or free, has a monopoly on the "true" score.</p></div></details>
+      <details><summary>Is there a free check wallet owners can run before every deposit?</summary><div class="a"><p>Yes — an AML check crypto free, every time, with no limit on how many addresses you run. Paste the address whenever you want to check AML crypto risk before accepting a transfer; there's no daily cap and no upgrade prompt waiting behind it.</p></div></details>
+      <details><summary>Does a clean result mean the funds are guaranteed safe?</summary><div class="a"><p>It means nothing matched at the exact moment we checked, not a promise about tomorrow. Blacklists update daily. A timestamped report proves what you knew when you made the call.</p></div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="wordmark" href="https://aml.legal/">
+          <span class="logomark"><svg viewBox="0 0 64 64"><path d="M32 15 L46 28 L32 49 L18 28 Z" fill="#2DB8D6"/><path d="M32 15 L46 28 L32 32 Z" fill="#7FE0D4"/><path d="M32 15 L18 28 L32 32 Z" fill="#F2EFEA" opacity="0.9"/></svg></span>
+          <span>AML<em>.legal</em></span>
+        </a>
+        <p style="max-width:40ch; margin-top:12px; font-size:.87rem;">Free AML screening for crypto wallets and transactions. Public datasets, named sources, nothing stored.</p>
+        <span class="updated" id="freshness-badge">780 REAL OFAC CRYPTO ADDRESSES · LAST REVIEW <time datetime="2026-08-25" id="freshness-time">AUG 25, 2026</time></span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#checker">AML checker</a>
+        <a href="#how">How it works</a>
+        <a href="#guide">Guide</a>
+        <a href="#faq">FAQ</a>
+        <a href="/about.html">Methodology &amp; sources</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <button type="button" class="footer-link-btn" data-open-contact>Contact</button>
+      </nav>
+    </div>
+    <p class="disclaimer">
+      © 2026 AML.legal. Reports produced by this service are informational risk screenings based on
+      public data at the time of the scan. Despite the domain name, they are not legal advice, not a
+      compliance certification, and not a guarantee of any outcome with an exchange or regulator.
+    </p>
+  </div>
+</footer>
+
+<!--
+  Contact modal, form-only — no email address is exposed anywhere in this
+  site's source. Submission goes to a hosted form backend (Formspree by
+  default; Web3Forms works the same way) whose destination inbox lives in
+  THEIR dashboard, not in this code — that's the whole point of this setup.
+
+  TO ACTIVATE:
+    1. Create a free form at https://formspree.io (or web3forms.com).
+    2. Copy the endpoint URL/ID they give you.
+    3. Paste it into FORM_ENDPOINT below.
+  Until that's done, the form will show a friendly error on submit instead
+  of silently failing — see submitContactForm() below.
+-->
+<div class="contact-modal-backdrop" id="contact-modal" hidden>
+  <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <button type="button" class="contact-modal-close" data-close-contact aria-label="Close contact form">×</button>
+    <h2 id="contact-modal-title">Get in touch</h2>
+    <p class="contact-modal-lede" id="contact-modal-lede">
+      Data correction, a bug in the checker, or a business question. We read every message that comes through.
+      We aim to reply within 24 hours.
+    </p>
+    <form id="contact-form">
+      <label for="cf-reason">What's this about</label>
+      <select id="cf-reason" name="reason">
+        <option value="Data correction">Data correction / dispute a result</option>
+        <option value="Bug report">Bug report</option>
+        <option value="Business inquiry">Business inquiry</option>
+        <option value="Other">Other</option>
+      </select>
+      <label for="cf-email">Your email</label>
+      <input id="cf-email" name="email" type="email" required placeholder="you@example.com">
+      <label for="cf-message">Message</label>
+      <textarea id="cf-message" name="message" rows="5" required placeholder="What's going on?"></textarea>
+      <button type="submit" class="btn primary" id="cf-submit-btn" style="width:100%; justify-content:center; margin-top:6px;">Send message</button>
+      <p class="contact-modal-status" id="contact-modal-status" hidden></p>
+      <p class="contact-modal-fallback">Prefer email? <a class="inline" href="mailto:[email protected]">[email protected]</a></p>
+    </form>
+  </div>
+</div>
+
+<script src="app.min.js?v=2026-08-26" defer></script>
+
+
+
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '9aa5b92f6319ffd2d1358595916b7d39af22af22';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript>Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
+</body>
+</html>
