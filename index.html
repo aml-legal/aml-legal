@@ -52,7 +52,7 @@
   "featureList": [
     "Free AML check for crypto wallets and transactions, no sign-up required",
     "USDT AML check across TRC-20, ERC-20 and BEP-20 networks",
-    "OFAC SDN sanctions screening against 780 real crypto addresses",
+    "OFAC SDN sanctions screening against 900 real crypto addresses",
     "Live lookup against Tether's on-chain freeze registry",
     "Detection of known sanctioned-mixer contracts",
     "Instant 0–100 risk score with a per-source breakdown",
@@ -66,7 +66,7 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "What is an AML check for crypto?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It's a background check for a wallet address instead of a person. This AML crypto check matches it against 780 real OFAC-sanctioned crypto addresses, asks the USDT contract directly whether it's frozen, and checks it against known sanctioned-mixer contracts — then returns a 0–100 score with the reasoning attached, not just the number." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "It's a background check for a wallet address instead of a person. This AML crypto check matches it against 900 real OFAC-sanctioned crypto addresses, asks the USDT contract directly whether it's frozen, and checks it against known sanctioned-mixer contracts — then returns a 0–100 score with the reasoning attached, not just the number." } },
     { "@type": "Question", "name": "What's the difference between this and checking a block explorer myself?",
       "acceptedAnswer": { "@type": "Answer", "text": "A block explorer shows raw activity: this address sent this many tokens to that address on this date. A screening report takes the same public data and tells you what it means — whether any of that history is sanctioned, frozen, or connected to something worth knowing about before you accept a transfer." } },
     { "@type": "Question", "name": "How do I run a free AML check on a USDT wallet?",
@@ -270,7 +270,7 @@
 
           <p class="datasets-line"><b>6 datasets</b> mapped out — 3 run live on every check, 3 are marked exactly where the gap is.</p>
           <div class="datasets">
-            <div class="ds"><span class="live-badge b-snap">Snapshot</span><span><b>OFAC SDN sanctions</b> <small>— 780 real crypto addresses, from OFAC's own file</small></span></div>
+            <div class="ds"><span class="live-badge b-snap">Snapshot</span><span><b>OFAC SDN sanctions</b> <small>— 900 real crypto addresses, from OFAC's own file</small></span></div>
             <div class="ds"><span class="live-badge b-live">Live</span><span><b>Tether freeze registry</b> <small>— read live from the contract</small></span></div>
             <div class="ds"><span class="live-badge b-snap">Snapshot</span><span><b>Mixers &amp; darknet</b> <small>— Tornado Cash, Sinbad, ChipMixer</small></span></div>
             <div class="ds"><span class="live-badge b-na">Not wired</span><span><b>FATF jurisdictions</b> <small>— grey/black-list exposure</small></span></div>
@@ -324,7 +324,7 @@
             </div>
 
             <p class="check-summary" id="check-summary">
-              <strong>What actually ran live:</strong> OFAC SDN matching against 780 real,
+              <strong>What actually ran live:</strong> OFAC SDN matching against 900 real,
               currently-published crypto addresses — the complete digital-currency portion of
               OFAC's list, pulled 2026-08-25 from a source that itself re-syncs nightly (not the ~19,000 non-crypto entries,
               which are irrelevant here) — plus a real-time on-chain call to Tether's contract for
@@ -433,7 +433,7 @@
     <table class="data-table">
       <thead><tr><th>Dataset</th><th>Status</th><th>What it answers</th><th>Source</th><th>Cost</th></tr></thead>
       <tbody>
-        <tr><td>OFAC SDN</td><td><span class="live-badge b-snap">Snapshot</span></td><td>Is this address formally sanctioned? Checked against 780 real crypto addresses — the complete digital-currency portion of OFAC's SDN list, not a hand-picked sample. Includes Tornado Cash's contracts (added August 2022, removed under a US court ruling in March 2025), the Sinbad mixer (November 2023), and Lazarus Group wallets. Since late 2023, <a href="https://tether.to" target="_blank" rel="noopener noreferrer">Tether</a> freezes anything <a href="https://ofac.treasury.gov/sanctions-list-service" target="_blank" rel="noopener noreferrer">OFAC</a> designates.</td><td>Pulled 2026-08-25 from OFAC's own file, via a community mirror that re-syncs nightly</td><td class="free">FREE</td></tr>
+        <tr><td>OFAC SDN</td><td><span class="live-badge b-snap">Snapshot</span></td><td>Is this address formally sanctioned? Checked against 900 real crypto addresses — the complete digital-currency portion of OFAC's SDN list, not a hand-picked sample. Includes Tornado Cash's contracts (added August 2022, removed under a US court ruling in March 2025), the Sinbad mixer (November 2023), and Lazarus Group wallets. Since late 2023, <a href="https://tether.to" target="_blank" rel="noopener noreferrer">Tether</a> freezes anything <a href="https://ofac.treasury.gov/sanctions-list-service" target="_blank" rel="noopener noreferrer">OFAC</a> designates.</td><td>Pulled 2026-08-25 from OFAC's own file, via a community mirror that re-syncs nightly</td><td class="free">FREE</td></tr>
         <tr><td>Tether freeze</td><td><span class="live-badge b-live">Live</span></td><td>Is the USDT itself frozen right now? One call to a public function on the USDT contract — true or false, nothing to interpret.</td><td>On-chain, read directly at scan time</td><td class="free">FREE</td></tr>
         <tr><td>Mixers &amp; darknet</td><td><span class="live-badge b-snap">Snapshot</span></td><td>Has this address touched a known mixer contract, directly? Compliance teams treat mixer contact as a hard flag regardless of intent.</td><td>Curated exposure list</td><td class="free">FREE</td></tr>
         <tr><td>FATF jurisdictions</td><td><span class="live-badge b-na">Not wired</span></td><td>Does the funding trail run through a country <a href="https://www.fatf-gafi.org/en/topics/virtual-assets.html" target="_blank" rel="noopener noreferrer">FATF</a> flagged for weak AML controls? Would adjust the score — context, not a verdict on its own.</td><td>Not wired in this build</td><td class="na">—</td></tr>
@@ -651,7 +651,7 @@
 <p>Strip away the marketing language and a wallet screening does three things. It matches — is this exact address on a sanctions list, or blacklisted at the contract level. Binary, no interpretation required.</p>
         <p>It traces — who sent money to this wallet, and who sent money to them. Two hops is the standard depth; by hop four you're usually looking at an exchange's entire deposit pool, not anything meaningful about your specific counterparty.</p>
         <p>And it labels — scam reports, phishing tags, drainer contracts, sourced from public reporting rather than a government list.</p>
-        <p>That's the category, industry-wide. This build wires up matching — against 780 real OFAC-sanctioned addresses and known mixer contracts — plus one thing outside that taxonomy entirely: reading Tether's own freeze registry live, in real time. Tracing and labeling aren't wired in yet — see <a class="cite" href="#datasets">what we screen</a> for the honest breakdown.</p>
+        <p>That's the category, industry-wide. This build wires up matching — against 900 real OFAC-sanctioned addresses and known mixer contracts — plus one thing outside that taxonomy entirely: reading Tether's own freeze registry live, in real time. Tracing and labeling aren't wired in yet — see <a class="cite" href="#datasets">what we screen</a> for the honest breakdown.</p>
         <p>Here's the part nobody selling AML software likes to say: different blockchain forensics engines disagree with each other constantly. Chainalysis and Elliptic score the same wallet differently often enough that it's a known joke among compliance teams. Treat any score, from anyone, as a strong opinion — not a court verdict.</p>
         </div>
 </details>
@@ -748,9 +748,9 @@
     <div class="live-grid">
       <div class="live-cell">
         <div class="live-tag">OFAC snapshot</div>
-        <div class="live-num">780</div>
+        <div class="live-num">900</div>
         <div class="live-cap">Real crypto addresses screened against</div>
-        <div class="live-sub2">pulled Aug 25, 2026 — see <a href="/about.html" style="color:inherit; text-decoration:underline; text-decoration-color:rgba(110,104,95,.5);">methodology</a></div>
+        <div class="live-sub2">pulled Aug 27, 2026 — see <a href="/about.html" style="color:inherit; text-decoration:underline; text-decoration-color:rgba(110,104,95,.5);">methodology</a></div>
       </div>
       <div class="live-cell">
         <div class="live-tag">OFAC snapshot</div>
@@ -773,7 +773,7 @@
     <div class="sec-head"><span class="sec-eyebrow">Questions</span></div>
     <h2>AML check — common questions</h2>
     <div class="faq" style="margin-top:26px">
-      <details open><summary>What is an AML check for crypto?</summary><div class="a"><p>It's a background check for a wallet address instead of a person. This AML crypto check matches it against 780 real OFAC-sanctioned crypto addresses, asks the USDT contract directly whether it's frozen, and checks it against known sanctioned-mixer contracts — then hands you a <a class="cite" href="#score">0–100 score</a> with the reasoning attached, not just the number.</p></div></details>
+      <details open><summary>What is an AML check for crypto?</summary><div class="a"><p>It's a background check for a wallet address instead of a person. This AML crypto check matches it against 900 real OFAC-sanctioned crypto addresses, asks the USDT contract directly whether it's frozen, and checks it against known sanctioned-mixer contracts — then hands you a <a class="cite" href="#score">0–100 score</a> with the reasoning attached, not just the number.</p></div></details>
       <details><summary>What's the difference between this and checking a block explorer myself?</summary><div class="a"><p>A block explorer shows raw activity. A screening report reads the same public data and tells you what it means — whether any of that history is sanctioned, frozen, or connected to something worth knowing about.</p></div></details>
       <details><summary>How do I run a free AML check on a USDT wallet?</summary><div class="a"><p>To run a free AML check on a USDT wallet, paste the address into the checker above. Pick TRC-20, ERC-20 or BEP-20 if we don't guess it automatically. Press run. Under thirty seconds later you have a score and a breakdown.</p></div></details>
       <details><summary>Is this AML check free, or is there a catch?</summary><div class="a"><p>No catch. OFAC's list is a government file. Tether's freeze function is a public contract call. We're not sitting on proprietary intelligence to charge for, the way paid AML software vendors do — we built a faster way to read data that was never locked up.</p></div></details>
@@ -800,7 +800,7 @@
           <span>AML<em>.legal</em></span>
         </a>
         <p style="max-width:40ch; margin-top:12px; font-size:.87rem;">Free AML screening for crypto wallets and transactions. Public datasets, named sources, nothing stored.</p>
-        <span class="updated" id="freshness-badge">780 REAL OFAC CRYPTO ADDRESSES · LAST REVIEW <time datetime="2026-08-25" id="freshness-time">AUG 25, 2026</time></span>
+        <span class="updated" id="freshness-badge">900 REAL OFAC CRYPTO ADDRESSES · LAST REVIEW <time datetime="2026-08-25" id="freshness-time">AUG 25, 2026</time></span>
       </div>
       <nav aria-label="Footer">
         <a href="#checker">AML checker</a>
@@ -861,7 +861,7 @@
   </div>
 </div>
 
-<script src="app.min.js?v=2026-08-26" defer></script>
+<script src="app.min.js?v=2026-08-27" defer></script>
 
 
 
