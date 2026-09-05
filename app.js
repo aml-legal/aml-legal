@@ -66,7 +66,7 @@
 // and every freshness badge on the page (hero + footer) updates itself.
 // If you wire up the update-ofac automation (see /scripts/update-ofac.mjs),
 // point its writer at this line so the date never drifts from reality.
-const OFAC_PULL_DATE = "2026-08-27";
+const OFAC_PULL_DATE = "2026-09-05";
 
 function initFreshnessBadges(){
   const pulled = new Date(OFAC_PULL_DATE + "T00:00:00Z");
@@ -137,7 +137,7 @@ const OFAC_SNAPSHOT = [
 // branch is regenerated nightly by GitHub Actions from OFAC's own file. No
 // entity/program metadata is attached to these — a match here means 'this
 // exact address is on OFAC's published crypto-address list', full stop.
-// Pulled: 2026-08-27. Not covered: Solana (upstream tool doesn't parse it yet).
+// Pulled: 2026-09-05. Not covered: Solana (upstream tool doesn't parse it yet).
 const OFAC_CRYPTO_ADDRESSES_EXT = [
   "123WBUDmSJv4GctdVEz6Qq6z8nXSKrJ4KX","125W5ek3DT6Zqy5S2iPt4FHQdNMCbZA3FU","1295rkVyNfFpqZpXvKGhDqwhP1jZcNNDMV","129zKFLoVad9JtxSmDKeJoLCsjhGR7b3vr","12HQDsicffSBaYdJ6BhnE22sfjTESmmzKx","12NpCkhddSNiDkD9rRYUCHsTT9ReMNiJjG",
   "12QtD5BFwRsdNsAZY76UVE1xyCGNTojH9h","12VrYZgS1nmf9KHHped24xBb1aLLRpV2cT","12YCfVAEzkEZXBYhUTyJJaRkgMXiFxJgcu","12YyR9EpvHxBjjKjTWqfKqeyoWnvcraxpW","12aNKp2iDKuhEde2YfPdd4DFGenRUTKupL","12jVCWW1ZhTLA5yVnroEJswqKwsfiZKsax",
